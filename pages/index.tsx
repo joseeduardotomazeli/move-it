@@ -1,5 +1,11 @@
+import ExperienceBar from '../components/ExperienceBar'
+
 function Home() {
-  return <h1>Move.it</h1>;
+  return (
+    <div className="container">
+      <ExperienceBar />
+    </div>
+  )
 }
 
-export default Home;
+export default Home
