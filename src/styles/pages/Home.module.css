@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  max-width: 992px;
+  height: 100vh;
+}
+
+.container section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  align-content: center;
+  gap: 6.25rem;
+}
