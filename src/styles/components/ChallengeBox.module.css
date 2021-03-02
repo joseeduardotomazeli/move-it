@@ -1,0 +1,112 @@
+.challengeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  padding: 1.5rem 2rem;
+
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.active header {
+  padding: 0 2rem 1.5rem;
+
+  border-bottom: 1px solid var(--gray-line);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--blue);
+}
+
+.active main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.active main strong {
+  margin: 1.5rem 0 1rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.active main p {
+  line-height: 1.5;
+}
+
+.active footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.active footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3rem;
+
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  transition: filter 0.2s;
+}
+
+.active footer button:hover {
+  filter: brightness(0.9);
+}
+
+.active footer button.failedButton {
+  background: var(--red);
+}
+
+.active footer button.succeededButton {
+  background: var(--green);
+}
+
+.notActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notActive strong {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.notActive p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 3rem;
+
+  max-width: 70%;
+
+  line-height: 1.4;
+}
+
+.notActive p img {
+  margin-bottom: 1rem;
+}
