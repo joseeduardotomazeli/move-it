@@ -18,7 +18,7 @@ function Profile() {
         <strong>José Eduardo Tomazeli</strong>
 
         <p>
-          <img src="icons/level.svg" alt="Level" />
+          <img src="/icons/level.svg" alt="Level" />
           Level {level}
         </p>
       </div>
