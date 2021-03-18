@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
 
-  height: 100%;
-
   padding: 1.5rem 2rem;
+
+  height: 100%;
 
   background-color: var(--white);
   border-radius: 5px;
@@ -76,11 +76,11 @@
 }
 
 .active footer button.failedButton {
-  background: var(--red);
+  background-color: var(--red);
 }
 
 .active footer button.succeededButton {
-  background: var(--green);
+  background-color: var(--green);
 }
 
 .notActive {
