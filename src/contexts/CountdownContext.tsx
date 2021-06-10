@@ -17,15 +17,15 @@ interface CountdownContextData {
   startCountdown: () => void
 }
 
-interface ChallengesProviderProps {
+interface CountdownProviderProps {
   children: ReactNode
 }
 
-const CountdownContext = createContext({} as CountdownContextData)
+export const CountdownContext = createContext({} as CountdownContextData)
 
 let timeout: NodeJS.Timeout
 
-function CountdownProvider(props: ChallengesProviderProps) {
+function CountdownProvider(props: CountdownProviderProps) {
   const { newChallenge } = useContext(ChallengesContext)
 
   const initialTime = 25 * 60
@@ -81,7 +81,5 @@ function CountdownProvider(props: ChallengesProviderProps) {
     </CountdownContext.Provider>
   )
 }
-
-export { CountdownContext }
 
 export default CountdownProvider

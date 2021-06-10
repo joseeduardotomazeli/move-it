@@ -18,7 +18,7 @@ function Countdown() {
   const [secondsLeft, secondsRight] = String(seconds).padStart(2, '0').split('')
 
   return (
-    <div>
+    <>
       <div className={styles.countdown}>
         <div>
           <span>{minutesLeft}</span>
@@ -37,28 +37,24 @@ function Countdown() {
         <button disabled className={styles.button}>
           Ciclo encerrado
         </button>
+      ) : isActive ? (
+        <button
+          type="button"
+          className={`${styles.button} ${styles.buttonActive}`}
+          onClick={resetCountdown}
+        >
+          Abandonar ciclo
+        </button>
       ) : (
-        <>
-          {isActive ? (
-            <button
-              type="button"
-              className={`${styles.button} ${styles.buttonActive}`}
-              onClick={resetCountdown}
-            >
-              Abandonar ciclo
-            </button>
-          ) : (
-            <button
-              type="button"
-              className={styles.button}
-              onClick={startCountdown}
-            >
-              Iniciar ciclo
-            </button>
-          )}
-        </>
+        <button
+          type="button"
+          className={styles.button}
+          onClick={startCountdown}
+        >
+          Iniciar ciclo
+        </button>
       )}
-    </div>
+    </>
   )
 }
 

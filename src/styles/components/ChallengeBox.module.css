@@ -8,9 +8,9 @@
 
   height: 100%;
 
-  background-color: var(--white);
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
   text-align: center;
 }
 
@@ -25,9 +25,9 @@
   padding: 0 2rem 1.5rem;
 
   border-bottom: 1px solid var(--gray-line);
+  color: var(--blue);
   font-weight: 600;
   font-size: 1.25rem;
-  color: var(--blue);
 }
 
 .active main {
@@ -41,9 +41,9 @@
 .active main strong {
   margin: 1.5rem 0 1rem;
 
+  color: var(--title);
   font-size: 2rem;
   font-weight: 600;
-  color: var(--title);
 }
 
 .active main p {
@@ -65,9 +65,9 @@
 
   border: 0;
   border-radius: 5px;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
   transition: filter 0.2s;
 }
 
