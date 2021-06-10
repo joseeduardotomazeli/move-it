@@ -54,8 +54,12 @@ function Home(props: HomeProps) {
   )
 }
 
-const getServerSideProps: GetServerSideProps = async (context) => {
-  const { level, currentExperience, challengesCompleted } = context.req.cookies
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const {
+    level = 1,
+    currentExperience = 0,
+    challengesCompleted = 0,
+  } = context.req.cookies
 
   return {
     props: {
@@ -65,7 +69,5 @@ const getServerSideProps: GetServerSideProps = async (context) => {
     },
   }
 }
-
-export { getServerSideProps }
 
 export default Home
