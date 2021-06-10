@@ -31,19 +31,19 @@ interface ChallengesProviderProps {
   children: ReactNode
 }
 
-const ChallengesContext = createContext({} as ChallengesContextData)
+export const ChallengesContext = createContext({} as ChallengesContextData)
 
 function ChallengesProvider(props: ChallengesProviderProps) {
-  const { children, ...rest } = props
+  const { children } = props
 
-  const [level, setLevel] = useState(rest.level ?? 1)
+  const [level, setLevel] = useState(props.level)
   const [currentExperience, setCurrentExperience] = useState(
-    rest.currentExperience ?? 0
+    props.currentExperience
   )
 
   const [activeChallenge, setActiveChallenge] = useState(null)
   const [challengesCompleted, setChallengesCompleted] = useState(
-    rest.challengesCompleted ?? 0
+    props.challengesCompleted
   )
 
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
@@ -124,7 +124,5 @@ function ChallengesProvider(props: ChallengesProviderProps) {
     </ChallengesContext.Provider>
   )
 }
-
-export { ChallengesContext }
 
 export default ChallengesProvider

@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
 
+  color: var(--title);
   font-family: 'Rajdhani';
   font-weight: 600;
-  color: var(--title);
 }
 
 .countdown > div {
@@ -14,8 +14,8 @@
   justify-content: space-evenly;
 
   border-radius: 5px;
-  background-color: var(--white);
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
   font-size: 8.5rem;
   text-align: center;
 }
@@ -50,9 +50,9 @@
   border: 0;
   border-radius: 5px;
   background-color: var(--blue);
+  color: var(--white);
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--white);
   transition: background-color 0.2s;
 }
 
